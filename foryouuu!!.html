@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi Love, Foto, dan Suara</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+        }
+        .heart {
+            position: relative;
+            font-size: 30px;
+            color: red;
+            animation: moveHeart 5s infinite alternate;
+        }
+        .heart::before {
+            content: '❤️';
+            position: absolute;
+            top: -20px;
+            left: 0;
+        }
+        @keyframes moveHeart {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(300px); }
+        }
+        .text {
+            margin-top: 20px;
+            font-size: 24px;
+            color: black;
+            animation: fadeInOut 5s infinite alternate;
+        }
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .photo {
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        audio {
+            display: none;
+        }
+        .hearts-container {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts-container">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+    <div class="text">I Love You Sayang</div>
+    <img class="photo" src="pt 1 .jpg" alt="Foto Custom">
+    <audio autoplay>
+        <source src="vn 1.opus" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
+
+</html>
+
